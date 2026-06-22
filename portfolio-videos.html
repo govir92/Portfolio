@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Videos — Govardhan R Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+:root{--s9:#14181C;--s8:#1B2125;--s7:#232B30;--s6:#313B41;--s5:#5A6670;--s3:#9BA6AD;--em:#15A079;--emt:rgba(21,160,121,.12);--w:#fff;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--s9);color:var(--w);font-family:'Archivo',sans-serif;overflow-x:hidden;}
+::selection{background:var(--em);color:var(--s9);}
+#sb{position:fixed;top:0;left:0;height:3px;background:var(--em);width:0%;z-index:9999;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:16px 52px;background:rgba(20,24,28,.98);backdrop-filter:blur(16px);border-bottom:1px solid rgba(21,160,121,.18);}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.08em;color:var(--w);text-decoration:none;display:flex;align-items:center;gap:8px;}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--em);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
+.back{display:flex;align-items:center;gap:8px;color:var(--s3);text-decoration:none;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:color .2s;}
+.back:hover{color:var(--em);}
+.back svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.tabs{position:fixed;top:57px;left:0;right:0;z-index:199;display:flex;background:rgba(27,33,37,.98);backdrop-filter:blur(10px);border-bottom:1px solid var(--s6);}
+.tab{flex:1;padding:13px 0;text-align:center;font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--s5);text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s,background .2s;}
+.tab:hover{color:var(--w);background:rgba(21,160,121,.06);}
+.tab.active{color:var(--em);border-bottom-color:var(--em);}
+.hdr{padding:148px 52px 36px;border-bottom:1px solid var(--s7);position:relative;overflow:hidden;}
+.hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 75% 50%,rgba(21,160,121,.08),transparent 70%);pointer-events:none;}
+.ey{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--em);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+.ey::before{content:'';width:22px;height:1.5px;background:var(--em);}
+.pt{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,6vw,5rem);line-height:.92;}
+.pd{font-size:.85rem;color:var(--s3);max-width:520px;line-height:1.75;margin-top:12px;}
+.pm{display:flex;align-items:center;gap:20px;margin-top:18px;flex-wrap:wrap;}
+.cw{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--s5);letter-spacing:.1em;display:flex;align-items:baseline;gap:6px;}
+.cn{font-size:1rem;color:var(--em);font-weight:700;}
+.lp{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(21,160,121,.3);padding:5px 13px;font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--em);letter-spacing:.1em;text-transform:uppercase;}
+.ld{width:6px;height:6px;border-radius:50%;background:var(--em);animation:blink 1.6s infinite;}
+.gw{padding:36px 52px 100px;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.card{position:relative;aspect-ratio:16/9;cursor:pointer;background:var(--s7);overflow:hidden;border:1px solid transparent;transition:border-color .25s;}
+.card:hover{border-color:rgba(21,160,121,.6);z-index:2;}
+.thumb{position:absolute;inset:0;overflow:hidden;background:linear-gradient(135deg,var(--s7),#0d2218);}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .5s,transform .5s cubic-bezier(.16,1,.3,1);}
+.thumb img.ok{opacity:1;}
+.card:hover .thumb img{transform:scale(1.05);}
+.ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3;}
+.pb{width:58px;height:58px;border-radius:50%;border:2px solid var(--em);background:rgba(10,14,16,.7);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;transform:scale(.55);opacity:0;transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .3s;}
+.card:hover .pb{transform:scale(1);opacity:1;}
+.pb::after{content:"";width:0;height:0;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent var(--em);margin-left:4px;}
+.bn{position:absolute;top:9px;left:9px;z-index:4;font-family:'JetBrains Mono',monospace;font-size:.54rem;color:var(--em);background:rgba(10,14,16,.82);padding:3px 8px;letter-spacing:.06em;}
+.ba{position:absolute;top:9px;right:9px;z-index:4;background:var(--em);color:var(--s9);font-family:'JetBrains Mono',monospace;font-size:.54rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;opacity:0;transform:translateY(-6px);transition:opacity .2s,transform .2s;}
+.card:hover .ba{opacity:1;transform:translateY(0);}
+.ci{position:absolute;bottom:0;left:0;right:0;z-index:4;padding:12px 11px 10px;background:linear-gradient(transparent,rgba(10,14,16,.97) 45%);}
+.cl{font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--em);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+.cn2{font-size:.8rem;font-weight:600;color:var(--w);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.st{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px 24px;gap:16px;text-align:center;}
+.sp{width:36px;height:36px;border-radius:50%;border:2px solid var(--s6);border-top-color:var(--em);animation:spin .75s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.sl{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--s5);letter-spacing:.12em;text-transform:uppercase;}
+.sh{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--s3);}
+.sb{font-size:.8rem;color:var(--s5);line-height:1.65;max-width:440px;}
+.sb a{color:var(--em);text-decoration:none;}
+.lb{position:fixed;inset:0;z-index:500;background:rgba(5,7,9,.97);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.lb.open{opacity:1;pointer-events:auto;}
+.lbw{width:min(960px,96vw);animation:lbi .38s cubic-bezier(.16,1,.3,1);}
+@keyframes lbi{from{transform:translateY(20px) scale(.97);opacity:0;}to{transform:none;opacity:1;}}
+.lbt{display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:11px;border-bottom:1px solid var(--s6);margin-bottom:13px;}
+.lbi2{min-width:0;flex:1;padding-right:14px;}
+.lbc{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--em);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+.lbn{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.lbx{width:34px;height:34px;flex-shrink:0;border-radius:50%;border:1px solid var(--s6);background:transparent;cursor:pointer;color:var(--w);display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;}
+.lbx:hover{border-color:var(--em);background:var(--emt);}
+.lbx svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;}
+.lbm{position:relative;width:100%;background:#000;padding-bottom:56.25%;}
+.lbm iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+.lbf{display:flex;align-items:center;justify-content:space-between;padding-top:11px;}
+.lbl{display:flex;align-items:center;gap:6px;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--em);text-decoration:none;}
+.lbl:hover{opacity:.7;}
+.lbl svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.lbr2{display:flex;align-items:center;gap:12px;}
+.lbpos{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--s5);}
+.lbnav{display:flex;gap:6px;}
+.lbb{width:32px;height:32px;border:1px solid var(--s6);background:transparent;cursor:pointer;color:var(--w);display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;}
+.lbb:hover{border-color:var(--em);background:var(--emt);}
+.lbb svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+@media(max-width:900px){nav,.hdr,.gw{padding-left:20px;padding-right:20px;}.grid{grid-template-columns:1fr 1fr;}.lbw{width:98vw;}}
+@media(max-width:560px){.grid{grid-template-columns:1fr;}.tab{font-size:.52rem;padding:11px 2px;letter-spacing:.04em;}}
+</style>
+</head>
+<body>
+<div id="sb"></div>
+<nav>
+  <a class="logo" href="Govardhan_R_Portfolio.html"><span class="dot"></span>GR</a>
+  <a class="back" href="Govardhan_R_Portfolio.html">
+    <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Back to portfolio
+  </a>
+</nav>
+<div class="tabs">
+  <a class="tab active" href="portfolio-videos.html">&#9654;&nbsp; Videos</a>
+  <a class="tab " href="portfolio-graphic.html">&#9672;&nbsp; Graphic Design</a>
+  <a class="tab " href="portfolio-brochures.html">&#9723;&nbsp; Brochures</a>
+</div>
+<div class="hdr">
+  <div class="ey">Selected work</div>
+  <div class="pt">VIDEOS</div>
+  <p class="pd">Broadcast edits, ed-tech explainers, promotional reels & motion graphics — 7+ years across television, ed-tech & corporate platforms.</p>
+  <div class="pm">
+    <div class="cw"><span class="cn" id="cnt">—</span>&nbsp;videos</div>
+    <div class="lp"><span class="ld"></span>Live from Google Drive</div>
+  </div>
+</div>
+<div class="gw">
+  <div class="grid" id="grid">
+    <div class="st"><div class="sp"></div><div class="sl">Loading from Drive…</div></div>
+  </div>
+</div>
+<div class="lb" id="lb">
+  <div class="lbw">
+    <div class="lbt">
+      <div class="lbi2">
+        <div class="lbc" id="lbc">VIDEO</div>
+        <div class="lbn" id="lbn">—</div>
+      </div>
+      <button class="lbx" onclick="lbClose()">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="lbm"><iframe id="lbfr" allowfullscreen allow="autoplay;encrypted-media"></iframe></div>
+    <div class="lbf">
+      <a class="lbl" id="lbhl" href="#" target="_blank" rel="noopener">
+        Open in Drive <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+      <div class="lbr2">
+        <span class="lbpos" id="lbp"></span>
+        <div class="lbnav">
+          <button class="lbb" onclick="lbNav(-1)"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="lbb" onclick="lbNav(1)"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const FOLDER_ID='1W-7PvRBQkmcLmhJIkbCXhChpp4m6tquF';
+const SECTION='VIDEO';
+const ACTION='PLAY';
+let files=[],cur=0;
+
+window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('sb').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';});
+function thumb(id){return`https://drive.google.com/thumbnail?id=${id}&sz=w800`;}
+function lbl(n){return n.replace(/\.[^/.]+$/,'');}
+function makeCard(f,i){
+  const el=document.createElement('div');
+  el.className='card';
+  el.innerHTML=`<div class="thumb"><img src="${thumb(f.id)}" alt="${lbl(f.name)}" loading="lazy" onload="this.classList.add('ok')" onerror="this.style.display='none'"></div><div class="ov"><div class="pb"></div></div><div class="bn">${String(i+1).padStart(2,'0')}</div><div class="ba">${ACTION}</div><div class="ci"><div class="cl">${SECTION}</div><div class="cn2">${lbl(f.name)}</div></div>`;
+  el.addEventListener('click',()=>lbOpen(i));
+  return el;
+}
+
+async function tryProxy(url){
+  const r=await fetch('https://api.allorigins.win/get?url='+encodeURIComponent(url));
+  if(!r.ok)throw new Error('proxy '+r.status);
+  const w=await r.json();
+  return JSON.parse(w.contents);
+}
+
+async function load(){
+  const grid=document.getElementById('grid');
+  try{
+    const apiUrl='https://www.googleapis.com/drive/v3/files?q='+
+      encodeURIComponent("'"+FOLDER_ID+"' in parents and trashed=false")+
+      '&fields=files(id,name,mimeType)&pageSize=100&orderBy=name&key=AIzaSyAlE8VvUBkutqHe1YG6n7yxIQGvFz7J-C4';
+    
+    let data;
+    try{data=await tryProxy(apiUrl);}
+    catch(e1){
+      const r2=await fetch(apiUrl);
+      data=await r2.json();
+    }
+    if(data.error)throw new Error(data.error.message||'API error');
+    files=data.files||[];
+    document.getElementById('cnt').textContent=files.length;
+    grid.innerHTML='';
+    if(!files.length){grid.innerHTML='<div class="st"><div class="sh">No files yet</div><div class="sb">Add files to your Drive folder — they appear automatically.</div></div>';return;}
+    files.forEach((f,i)=>grid.appendChild(makeCard(f,i)));
+  }catch(err){
+    console.error(err);
+    grid.innerHTML=`<div class="st"><div class="sh">Could not load</div><div class="sb">${err.message}<br><br><a href="https://drive.google.com/drive/folders/${FOLDER_ID}" target="_blank">&#8599; Open folder in Google Drive</a></div></div>`;
+  }
+}
+
+function lbOpen(i){cur=i;lbRender();document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function lbRender(){const f=files[cur];document.getElementById('lbn').textContent=lbl(f.name);document.getElementById('lbc').textContent=SECTION+'  ·  '+(cur+1)+' of '+files.length;document.getElementById('lbp').textContent=(cur+1)+' / '+files.length;document.getElementById('lbfr').src=`https://drive.google.com/file/d/${f.id}/preview`;document.getElementById('lbhl').href=`https://drive.google.com/file/d/${f.id}/view`;}
+function lbClose(){document.getElementById('lb').classList.remove('open');document.getElementById('lbfr').src='';document.body.style.overflow='';}
+function lbNav(d){cur=(cur+d+files.length)%files.length;lbRender();}
+document.getElementById('lb').addEventListener('click',e=>{if(e.target===document.getElementById('lb'))lbClose();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lbClose();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1);});
+load();
+</script>
+</body>
+</html>
