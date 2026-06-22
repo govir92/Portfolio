@@ -285,10 +285,19 @@
     background: var(--emerald);
     animation: blink 2s ease-in-out infinite;
   }
-  .id-avatar-img {
+  .id-avatar {
+  width: 120px;       /* Gives the container a set size */
+  height: 120px;
+  border-radius: 4px; /* Optional slight rounding to match your ID card theme */
+  overflow: hidden;   /* Cuts off any image overflow */
+  margin-bottom: 20px;
+  background: var(--slate-600); /* Fallback background color */
+}
+
+.id-avatar-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This keeps the aspect ratio intact while filling the box */
+  object-fit: cover;
   display: block;
 }
   .id-avatar-text {
@@ -641,7 +650,7 @@
   <div class="about-grid">
     <div class="reveal">
       <div class="id-card">
-       <div class="id-avatar"><img src="https://thumbnail.imagekit.io/d976vcbsc/1gobhwJ713nEEucNFzQO3ywk4nVTslQvo" alt="Avatar" class="id-avatar-img"></div>
+       <div class="id-avatar"><img src="https://drive.google.com/file/d/1gobhwJ713nEEucNFzQO3ywk4nVTslQvo/view?usp=drive_link" alt="Avatar" class="id-avatar-img"></div>
         <div class="id-row"><span class="id-field">PHONE</span><span class="id-val">+91 7019880659</span></div>
         <div class="id-row"><span class="id-field">EMAIL</span><span class="id-val">editor.govi@gmail.com</span></div>
         <div class="id-row"><span class="id-field">BASE</span><span class="id-val">Bangalore, IN</span></div>
