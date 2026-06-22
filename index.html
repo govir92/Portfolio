@@ -285,12 +285,12 @@
     background: var(--emerald);
     animation: blink 2s ease-in-out infinite;
   }
-  .id-avatar {
-    width: 100%; aspect-ratio: 1; background: var(--slate-900);
-    border: 1px solid var(--emerald-dim);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 20px; position: relative;
-  }
+  .id-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This keeps the aspect ratio intact while filling the box */
+  display: block;
+}
   .id-avatar-text {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4.5rem; color: var(--emerald); opacity: 0.85;
